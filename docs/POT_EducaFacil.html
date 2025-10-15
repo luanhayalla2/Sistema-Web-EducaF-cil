@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>POT - EducaFácil</title>
+  <style>
+    body{font-family:Arial,Helvetica,sans-serif;max-width:900px;margin:40px auto;color:#222}
+    h1,h2,h3{color:#154360}
+    table{width:100%;border-collapse:collapse;margin:10px 0}
+    table,th,td{border:1px solid #ccc}
+    th,td{padding:8px;text-align:left}
+    pre{background:#f7f7f7;padding:10px;border-left:3px solid #ddd}
+  </style>
+</head>
+<body>
+  <h1>POT – Projeto 1: Sistema Web “EducaFácil”</h1>
+  <h2>1. Identificação do Projeto</h2>
+  <ul>
+    <li><strong>Nome do Projeto:</strong> EducaFácil</li>
+    <li><strong>Tipo de Projeto:</strong> Sistema Web (Gestão Escolar)</li>
+    <li><strong>Tema:</strong> Educação e Tecnologia</li>
+    <li><strong>Integrantes:</strong> (Inserir nomes dos membros do grupo)</li>
+    <li><strong>Professor Orientador:</strong> (Inserir nome)</li>
+    <li><strong>Curso:</strong> Técnico em Desenvolvimento de Sistemas</li>
+    <li><strong>Instituição:</strong> SENAC</li>
+    <li><strong>Período Letivo:</strong> 2025</li>
+  </ul>
+
+  <h2>2. Contextualização do Problema</h2>
+  <p>Atualmente, muitas escolas, cursos técnicos e instituições de ensino enfrentam grandes dificuldades na organização das informações acadêmicas — como frequência dos alunos, lançamento de notas e comunicação com pais e responsáveis. Grande parte desse processo ainda é manual, feito por meio de planilhas, cadernos ou sistemas internos desatualizados.</p>
+  <p>Essas práticas resultam em:</p>
+  <ul>
+    <li>Perda de informações importantes;</li>
+    <li>Retrabalho na conferência de dados;</li>
+    <li>Falta de transparência e comunicação com responsáveis;</li>
+    <li>Dificuldade de análise de desempenho dos alunos.</li>
+  </ul>
+
+  <h2>3. Objetivo Geral</h2>
+  <p>Desenvolver um sistema web de gestão escolar simplificada, denominado EducaFácil, que permita o registro de frequência, lançamento de notas e geração de relatórios de desempenho por turma e por aluno, de forma intuitiva, responsiva e segura.</p>
+
+  <h2>4. Objetivos Específicos</h2>
+  <ul>
+    <li>Implementar login seguro para professores e alunos, com controle de acesso.</li>
+    <li>Criar módulos de cadastro para alunos, turmas e disciplinas.</li>
+    <li>Permitir o registro diário de frequência de alunos por turma.</li>
+    <li>Desenvolver o lançamento e consulta de notas por disciplina e por período.</li>
+    <li>Gerar relatórios e gráficos de desempenho (presença e notas) com visualização clara.</li>
+    <li>Garantir responsividade e acessibilidade da interface em dispositivos móveis e desktops.</li>
+    <li>Armazenar os dados em um banco relacional (MySQL ou PostgreSQL) de forma estruturada.</li>
+    <li>Documentar o projeto com README.md completo, código-fonte no GitHub e gestão no Trello.</li>
+  </ul>
+
+  <h2>5. Escopo do Projeto (MVP – Produto Mínimo Viável)</h2>
+  <h3>Funcionalidades Essenciais</h3>
+  <table>
+    <thead><tr><th>Nº</th><th>Funcionalidade</th><th>Descrição</th><th>Atores Envolvidos</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Login</td><td>Autenticação de professores e alunos com credenciais únicas</td><td>Professor / Aluno</td></tr>
+      <tr><td>2</td><td>Cadastro de Alunos, Turmas e Disciplinas</td><td>Formulários para inserir, editar e excluir dados</td><td>Administrador / Professor</td></tr>
+      <tr><td>3</td><td>Registro de Presença</td><td>Professores marcam presença diária dos alunos</td><td>Professor</td></tr>
+      <tr><td>4</td><td>Lançamento de Notas</td><td>Professores inserem notas por disciplina e período</td><td>Professor</td></tr>
+      <tr><td>5</td><td>Relatórios de Desempenho</td><td>Tabelas e gráficos com médias, faltas e aproveitamento</td><td>Professor / Aluno</td></tr>
+      <tr><td>6</td><td>Interface Responsiva</td><td>Layout adaptável para celulares, tablets e desktops</td><td>Todos</td></tr>
+    </tbody>
+  </table>
+
+  <h2>6. Tecnologias Sugeridas</h2>
+  <h3>Front-end</h3>
+  <ul>
+    <li>React.js – Criação da interface interativa e responsiva</li>
+    <li>Axios – Comunicação entre front e back-end (requisições HTTP)</li>
+    <li>Chart.js – Geração de gráficos e relatórios visuais</li>
+    <li>CSS / Tailwind / Bootstrap – Estilização e responsividade</li>
+  </ul>
+
+  <h3>Back-end</h3>
+  <ul>
+    <li>Node.js (Express) ou Django REST Framework – API para controle de dados</li>
+    <li>JWT (JSON Web Token) – Autenticação segura de usuários</li>
+    <li>RESTful API – Estrutura para comunicação entre cliente e servidor</li>
+  </ul>
+
+  <h3>Banco de Dados</h3>
+  <ul>
+    <li>PostgreSQL ou MySQL – Armazenamento relacional de informações de alunos, turmas, notas e frequência</li>
+  </ul>
+
+  <h2>7. Estrutura do Sistema (Arquitetura)</h2>
+  <p>Front-end (React) → comunica-se via Axios → com o Back-end (API REST) → conectado ao Banco de Dados Relacional (PostgreSQL/MySQL).</p>
+  <p>Fluxo resumido:</p>
+  <pre>Usuário (professor/aluno)
+        ↓
+Interface Web (React)
+        ↓
+API (Node.js / Django)
+        ↓
+Banco de Dados (MySQL / PostgreSQL)</pre>
+
+  <h2>8. Requisitos do Sistema</h2>
+  <h3>Requisitos Funcionais</h3>
+  <ul>
+    <li>O sistema deve permitir login com autenticação por usuário e senha.</li>
+    <li>O professor deve poder cadastrar, editar e excluir turmas, alunos e disciplinas.</li>
+    <li>O professor deve poder lançar notas e registrar presenças.</li>
+    <li>O aluno deve poder visualizar suas notas e presença.</li>
+    <li>O sistema deve gerar relatórios gráficos de desempenho.</li>
+  </ul>
+
+  <h3>Requisitos Não Funcionais</h3>
+  <ul>
+    <li>Interface deve ser responsiva e intuitiva.</li>
+    <li>O sistema deve armazenar os dados de forma segura e persistente.</li>
+    <li>A autenticação deve ser feita com JWT.</li>
+    <li>O projeto deve ser hospedado em repositório GitHub com documentação.</li>
+    <li>O projeto deve ser gerenciado com Trello (Kanban).</li>
+  </ul>
+
+  <h2>9. Cronograma de Desenvolvimento (Exemplo)</h2>
+  <table>
+    <thead><tr><th>Etapa</th><th>Atividade</th><th>Período</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Levantamento de requisitos e modelagem do banco de dados</td><td>15/10 – 25/10</td></tr>
+      <tr><td>2</td><td>Criação do back-end (API REST e banco)</td><td>26/10 – 10/11</td></tr>
+      <tr><td>3</td><td>Desenvolvimento do front-end (interfaces React)</td><td>11/11 – 25/11</td></tr>
+      <tr><td>4</td><td>Integração front e back-end</td><td>26/11 – 05/12</td></tr>
+      <tr><td>5</td><td>Testes, correções e deploy local</td><td>06/12 – 10/12</td></tr>
+      <tr><td>6</td><td>Documentação e entrega final</td><td>11/12 – 15/12</td></tr>
+    </tbody>
+  </table>
+
+  <h2>10. Entregas Obrigatórias</h2>
+  <ul>
+    <li>Repositório no GitHub contendo todo o código do projeto</li>
+    <li>Estrutura organizada (frontend / backend / banco)</li>
+    <li>Arquivo README.md completo com: descrição do sistema, tecnologias utilizadas, passos de instalação e execução e prints das telas</li>
+    <li>Quadro Kanban no Trello (A Fazer, Em Progresso, Concluído)</li>
+    <li>Apresentação final (pitch + demonstração funcional)</li>
+  </ul>
+
+  <h2>11. Possíveis Extensões Futuras</h2>
+  <ul>
+    <li>Envio automático de notificações (e-mail/SMS) aos responsáveis;</li>
+    <li>Área administrativa com controle de professores;</li>
+    <li>Exportação de boletins em PDF;</li>
+    <li>Dashboard com indicadores de desempenho geral;</li>
+    <li>Integração com API de calendários (Google Calendar).</li>
+  </ul>
+
+  <h2>12. Conclusão</h2>
+  <p>O EducaFácil busca modernizar e simplificar a gestão escolar, aproximando alunos, professores e responsáveis através de uma solução web eficiente, segura e de fácil uso. Com o uso de tecnologias modernas e metodologias ágeis, o sistema oferece uma visão clara e automatizada do desempenho escolar, contribuindo para uma educação mais conectada, transparente e organizada.</p>
+
+  <hr>
+  <p>Arquivo gerado automaticamente. Para converter para <strong>.docx</strong> ou <strong>.pdf</strong>, veja <code>docs/README.md</code>.</p>
+</body>
+</html>
