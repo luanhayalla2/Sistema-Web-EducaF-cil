@@ -1,26 +1,26 @@
-POT - EducaFácil
+# Documentação do POT (Plano de Trabalho)
 
-Este diretório contém uma versão HTML do POT (Plano de Trabalho) do projeto EducaFácil e instruções para converter o documento para `.docx` ou `.pdf` localmente.
+Este diretório contém uma versão em HTML do POT do projeto EducaFácil.
 
-Arquivos
+## Arquivos
 
-- `POT_EducaFacil.html` — versão em HTML do POT.
+- `POT_EducaFacil.html` — Versão HTML do POT, para visualização rápida no navegador.
 
-Como gerar `.docx` e `.pdf`
+## Como gerar `.docx` e `.pdf` com capa e sumário
 
-Opção A — usar o Pandoc (recomendado):
+A fonte principal para gerar documentos formatados é o arquivo `POT_EducaFacil.md` na raiz do projeto.
 
-1. Instale o Pandoc: https://pandoc.org/installing.html
-2. (Opcional) Instale um motor de PDF como wkhtmltopdf ou use o próprio Pandoc com LaTeX (MikTeX/TeX Live).
+1.  **Instale o Pandoc**: https://pandoc.org/installing.html
+2.  **(Opcional para PDF)** Instale um motor LaTeX como MiKTeX (Windows) ou TeX Live (Linux/Mac).
 
-Com Pandoc instalado, abra um terminal na pasta `docs/` e execute:
+Com o Pandoc instalado, abra um terminal na **raiz do projeto** e execute um dos comandos abaixo:
 
 ```powershell
-# converter HTML para DOCX
-pandoc POT_EducaFacil.html -o POT_EducaFacil.docx
+# Gerar DOCX a partir do Markdown
+pandoc POT_EducaFacil.md -o POT_EducaFacil_Final.docx --toc --standalone
 
-# converter HTML para PDF (requer LaTeX ou wkhtmltopdf)
-pandoc POT_EducaFacil.html -o POT_EducaFacil.pdf
+# Gerar PDF a partir do Markdown (requer LaTeX)
+pandoc POT_EducaFacil.md -o POT_EducaFacil_Final.pdf --toc --standalone
 ```
 
 Opção B — abrir `POT_EducaFacil.html` no navegador e usar "Imprimir → Salvar como PDF".
